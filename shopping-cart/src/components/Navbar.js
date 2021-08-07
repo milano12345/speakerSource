@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
      
      render(){
          const length = this.props.items.length
+         console.log('thisprops', this.props)
     return(
             <nav className="nav-wrapper">
                 <div className="title">
@@ -16,7 +17,7 @@ import { Link } from 'react-router-dom'
                     <ul className="floater">
                         <li><Link to="/">Shop</Link></li>
                         <li><Link to="/cart">My cart</Link></li>
-                        <li><Link to="/cart"><i className="material-icons new badge">shopping_cart</i>{length} </Link></li>
+                        <li><Link style={{fontSize:"2rem"}} to="/cart"><i className="material-icons new badge">shopping_cart</i>{length} </Link></li>
                     </ul>
                 </div>
             </nav>
