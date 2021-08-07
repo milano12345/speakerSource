@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
+import Navbar from './Navbar';
+
 
  class Home extends Component{
+
     
     handleClick = (id)=>{
         this.props.addToCart(id); 
     }
 
     render(){
+        const length = this.props.items.length
+        console.log('length',length)
         let itemList = this.props.items.map(item=>{
             return(
                 <div className="card" key={item.id}>
@@ -28,6 +33,7 @@ import { addToCart } from './actions/cartActions'
         })
 
         return(
+
             <div className="myBox">
                 <h3 className="center">Our items</h3>
                 <div className="box">

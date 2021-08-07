@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
- const Navbar = ()=>{
+
+ class Navbar extends Component {
+     
+     render(){
+         const length = this.props.items.length
     return(
         <div className="navigation">
             <nav className="nav-wrapper">
@@ -11,7 +16,7 @@ import { Link } from 'react-router-dom'
                     <ul className="floater">
                         <li><Link to="/">Shop</Link></li>
                         <li><Link to="/cart">My cart</Link></li>
-                        <li><Link to="/cart"><i className="material-icons">shopping_cart</i></Link></li>
+                        <li><Link to="/cart"><i className="material-icons new badge">shopping_cart</i>{length} </Link></li>
                     </ul>
                 </div>
             </nav>
@@ -19,6 +24,14 @@ import { Link } from 'react-router-dom'
    </div>
         
     )
+     }
 }
 
-export default Navbar;
+const mapStateToProps = (state)=>{
+    return{
+        items: state.addedItems,
+        //addedItems: state.addedItems
+    }
+}
+
+export default connect(mapStateToProps)(Navbar)
