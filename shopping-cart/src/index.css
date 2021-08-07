@@ -103,6 +103,30 @@ strong {
     text-align: center;
     height: 100%;
 }
+.material-icons{
+    font-size: 5.3rem;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+form {
+    padding: 2rem;
+}
+
+label {
+    color:black;
+    font-size: 1rem;
+}
+.form-wrapper {
+    width: 75%;
+    margin: auto;
+    background: aliceblue;
+    border: 5px dotted black;
+}
 
 h4 {
     font-size: 2.4rem;

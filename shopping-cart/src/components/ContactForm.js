@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ContactForm() {
+const ContactForm = () => {
   const [status, setStatus] = useState("Submit");
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,9 +21,13 @@ function ContactForm() {
     setStatus("Submit");
     let result = await response.json();
     alert(result.status);
+    console.log(result.status)
   };
 
   return (
+      <footer className="footer">
+          <div className="form-wrapper">
+              <h4 className="center">Contact Us</h4>
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
@@ -39,9 +43,11 @@ function ContactForm() {
       </div>
       <button type="submit">{status}</button>
     </form>
+    </div>
+    </footer>
   );
 };
 
-export default ContactForm;
+export default ContactForm
 
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import ContactForm from './components/ContactForm';
 
+
 class App extends Component {
   render() {
     return (
-       <BrowserRouter>
             <div className="App">
               <Navbar/>
                 <Switch>
@@ -17,7 +17,7 @@ class App extends Component {
                   </Switch>
                   <ContactForm/>
              </div>
-       </BrowserRouter>
+
       
     );
   }
