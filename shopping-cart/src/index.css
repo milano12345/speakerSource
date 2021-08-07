@@ -106,7 +106,7 @@ strong {
 
 .logo {
     height: auto;
-    width: 50%;
+    width: 25%;
     display: block;
   margin-left: auto;
   margin-right: auto;
@@ -200,5 +200,11 @@ nav ul a:before {
 @media only screen and (max-width: 550px) {
     .right {
         justify-content: center;
+    }
+    .card {
+        width: 90%;
+    }
+    .logo {
+        width: 50%;
     }
 }
