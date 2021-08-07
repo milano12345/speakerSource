@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
          const length = this.props.items.length
     return(
             <nav className="nav-wrapper">
-                <div className="container">
+                <div className="title">
                     <Link to="/">
                         The <strong>Secret</strong> Stache</Link>
                 </div>

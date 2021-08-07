@@ -53,8 +53,8 @@ nav ul a {
 
 nav {
     background-color: black;
-    font-size: 2.5rem;
-    height: 8rem;
+    font-size: 2.8rem;
+    height: 7rem;
 }
 
 .page-footer {
@@ -82,18 +82,26 @@ nav {
 
 strong {
     font-weight: 700;
+    animation-name: fadeIn, shake;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
 }
 
 .card {
     margin: .5rem 0.5rem 1rem .5rem!important
 }
 
-.container {
-    text-align: center;
-    height: 100%;
+.title {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    text-align: center;
+    height: 100%;
 }
 
 .logo {
