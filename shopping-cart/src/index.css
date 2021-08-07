@@ -104,6 +104,15 @@ strong {
     height: 100%;
 }
 
+h4 {
+    font-size: 2rem;
+    width: 75%;
+    line-height: 155%;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .logo {
     height: auto;
     width: 25%;
