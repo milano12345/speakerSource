@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 .card{
-    width: 300px;
+  width: 85%;
 }
 .card .card-image .card-title{
     color: black;
@@ -88,6 +88,9 @@ nav {
     align-content: stretch;
 }
 
+.page-footer .footer-copyright {
+background-color: black;
+}
 strong {
     font-weight: 700;
     animation-name: fadeIn, shake;
@@ -117,9 +120,20 @@ strong {
 
 .footer {
     width: 100%;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 2rem;
+    text-align: center;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
 
 form {
     padding: 2rem;
@@ -130,10 +144,12 @@ label {
     font-size: 1rem;
 }
 .form-wrapper {
-    width: 75%;
+    width: 85%;
     margin: auto;
     background: aliceblue;
+    color: black;
     border: 5px dotted black;
+    margin-bottom: 2.5rem;
 }
 
 h4 {
