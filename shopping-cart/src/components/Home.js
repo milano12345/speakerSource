@@ -27,7 +27,7 @@ import img2 from '../images/cup.jpg'
 
                         <div className="card-content">
                             <p>{item.desc}</p>
-                            <p><b>Price: {item.price}$</b></p>
+                            <p><b>Price: ${item.price}.00</b></p>
                         </div>
                  </div>
 
