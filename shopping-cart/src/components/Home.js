@@ -37,8 +37,8 @@ import img2 from '../images/cup.jpg'
         return(
            
             <div className="myBox">
-                 <img className={"cup"} src={img2}/>
-                 <img className={"logo"} src={img}/>
+                 <img className={"cup"} src={img2} alt={"Great Responsibility"}/>
+                 <img className={"logo"} src={img} alt={"Logo"}/>
                 
                 <h3 className="center">Top Sellers</h3>
                 <div className="box">

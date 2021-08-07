@@ -54,6 +54,7 @@ nav ul a {
 nav {
     background-color: black;
     font-size: 2.5rem;
+    height: 8rem;
 }
 
 .page-footer {
@@ -79,12 +80,20 @@ nav {
     align-content: stretch;
 }
 
+strong {
+    font-weight: 700;
+}
+
 .card {
     margin: .5rem 0.5rem 1rem .5rem!important
 }
 
 .container {
     text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -107,6 +116,15 @@ nav ul a {
     z-index: 1;
     opacity: .9;
     background: white;
+    
+}
+
+nav ul a:hover {
+    width: 5.6rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    z-index: 1;
+    opacity: .9;
+    background: gray;
     
 }
 
