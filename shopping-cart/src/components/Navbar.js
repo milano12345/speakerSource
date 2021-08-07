@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
      render(){
          const length = this.props.items.length
     return(
-        <div className="navigation">
             <nav className="nav-wrapper">
                 <div className="container">
                     <Link to="/">
@@ -21,8 +20,6 @@ import { Link } from 'react-router-dom'
                     </ul>
                 </div>
             </nav>
-
-   </div>
         
     )
      }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
 import img from '../images/mustache.png'
+import img2 from '../images/cup.jpg'
 
 
 
@@ -36,8 +37,10 @@ import img from '../images/mustache.png'
         return(
            
             <div className="myBox">
+                 <img className={"cup"} src={img2}/>
                  <img className={"logo"} src={img}/>
-                <h3 className="center">Our items</h3>
+                
+                <h3 className="center">Top Sellers</h3>
                 <div className="box">
                     {itemList}
                 </div>
