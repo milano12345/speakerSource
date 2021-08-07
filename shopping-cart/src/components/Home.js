@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
-import Navbar from './Navbar';
+import img from '../images/mustache.png'
+
 
 
  class Home extends Component{
@@ -33,8 +34,9 @@ import Navbar from './Navbar';
         })
 
         return(
-
+           
             <div className="myBox">
+                 <img className={"logo"} src={img}/>
                 <h3 className="center">Our items</h3>
                 <div className="box">
                     {itemList}

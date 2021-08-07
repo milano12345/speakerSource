@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom'
         <div className="navigation">
             <nav className="nav-wrapper">
                 <div className="container">
-                    <Link to="/" className="brand-logo">Shopping</Link>
+                    <Link to="/">
+                        The <strong>Secret</strong> Stache</Link>
                 </div>
                 <div className="myBox2">
                     <ul className="floater">
