@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <link rel="prefetch" as="image" href="../src/images/cup.jpg" />
+    <link rel="prefetch" as="image" href="../src/images/cup.jpg"/>
     <link rel="prefetch" as="image" href="../src/images/mustache.png" />
     <!--
       manifest.json provides metadata used when your web app is added to the
@@ -33,11 +33,10 @@
     </noscript>
     <div id="root"></div>
     <script>
-          function setImage(){
-var url = 'https://avatarfiles.alphacoders.com/822/82242.png';
- var image = new Image();
- image.src = url;
- document.getElementById('container').appendChild(image)
+          function setImage(obj){
+            alert("image loaded")
+            console.log(obj,'obj')
+ document.getElementById('cup').appendChild(obj)
     }
     </script>
     <!--
