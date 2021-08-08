@@ -8,6 +8,12 @@ import img2 from '../images/cup.jpg'
 
  class Home extends Component{
 
+    componentDidMount() {
+       const imageList = [img, img2]
+        imageList.forEach((image) => {
+            new Image().src = image
+        });
+    }
     
     handleClick = (id)=>{
         this.props.addToCart(id); 
