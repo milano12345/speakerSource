@@ -51,6 +51,10 @@ nav ul a {
     color:black
 }
 
+img {
+    height: 100%;
+    width: 100%;
+}
 nav {
     background: rgb(1,1,15);
     background: linear-gradient(225deg, rgba(1,1,15,1) 0%, rgba(94,93,2,1) 0%, rgba(1,11,13,0.9868989832261029) 35%);
