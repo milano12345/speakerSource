@@ -8,6 +8,7 @@ import img2 from '../images/cup.jpg'
 
  class Home extends Component{
 
+    
     handleClick = (id)=>{
         this.props.addToCart(id); 
     }
@@ -36,7 +37,7 @@ import img2 from '../images/cup.jpg'
         return(
            
             <div className="myBox">
-                 <img className={"cup"} rel="preload" as="image" src={img2} alt={"Great Responsibility"}/>
+                 <img className={"cup"} src={img2} alt={"Great Responsibility"}/>
                  <h4 className="center" style={{fontFamily:"cursive"}}>"Finding the best deals, so you don't have to!"</h4>
                  <img className={"logo"} src={img} alt={"Logo"}/>
                 <h3 className="center">Top Sellers</h3>
