@@ -30,6 +30,10 @@ const contactEmail = nodemailer.createTransport({
     }
   });
 
+  router.get("/", (req, res)=> {
+    res.send('ho!')
+  })
+  
   router.post("/contact", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
