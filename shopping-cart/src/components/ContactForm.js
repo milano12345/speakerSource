@@ -13,7 +13,6 @@ const ContactForm = () => {
     };
     let response = await fetch("https://now-express-liard.vercel.app/contact", {
       method: "POST",
-      mode: "cors",
       body: JSON.stringify(details),
     });
     setStatus("Submit");
