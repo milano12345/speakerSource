@@ -15,10 +15,12 @@ const ContactForm = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
+        mode: "no-cors"
       },
       body: JSON.stringify(details),
     });
     setStatus("Submit");
+    console.log('details', JSON.stringify(details))
     let result = await response.json();
     alert(result.status);
     console.log(result.status)
