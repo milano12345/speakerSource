@@ -2,10 +2,14 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+const path = require('path')
 require('dotenv').config()
-app.use(express.static(path.join(__dirname, 'build')))
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(express.static("public"));
+
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
@@ -30,10 +34,7 @@ const contactEmail = nodemailer.createTransport({
     }
   });
 
-  router.get("/", (req, res)=> {
-    res.send('ho!')
-  })
-  
+
   router.post("/contact", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
@@ -53,4 +54,7 @@ const contactEmail = nodemailer.createTransport({
         res.json({ status: "Message Sent" });
       }
     });
+  });
+  app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
   });
