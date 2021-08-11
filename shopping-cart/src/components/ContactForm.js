@@ -14,10 +14,9 @@ const ContactForm = () => {
     let response = await fetch("https://now-express-liard.vercel.app/contact", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
-        "Origin" : "https://now-express-liard.vercel.app/"
+        "Content-Type": "text/plain",
       },
-      body: JSON.stringify(details),
+      body: details,
     });
     setStatus("Submit");
     let result = await response.json();
