@@ -20,7 +20,7 @@ class Recipe extends Component{
     onSubmit = (e) => {
         e.preventDefault()
         const requestOptions = {
-            method: 'POST',
+            method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(this.props.total)
         };
