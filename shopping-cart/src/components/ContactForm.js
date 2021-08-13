@@ -12,6 +12,7 @@ const ContactForm = () => {
       message: message.value,
     };
     let response = await fetch("https://now-express-liard.vercel.app/contact", {
+      method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
