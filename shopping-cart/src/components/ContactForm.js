@@ -11,7 +11,7 @@ const ContactForm = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("https://now-express-liard.vercel.app/contact", {
+    let response = await fetch("https://senditnow.vercel.app/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
