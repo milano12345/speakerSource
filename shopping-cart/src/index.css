@@ -43,7 +43,8 @@
 }
 
 .myBox2 {
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
     background: rgba(114, 186, 94, 0.05);
 }
 
@@ -70,7 +71,7 @@ nav {
 .floater {
     position: fixed;
     top: 8rem;
-    left: 27.1rem;
+    left: 0;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
