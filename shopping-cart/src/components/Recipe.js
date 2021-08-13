@@ -24,7 +24,7 @@ class Recipe extends Component{
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(this.props.total)
         };
-        fetch('http://localhost:5000/create-checkout-session', requestOptions)
+        fetch('https://senditnow.vercel.app/create-checkout-session', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ postId: data.id }));
     }
