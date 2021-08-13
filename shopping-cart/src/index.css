@@ -69,9 +69,8 @@ nav {
 
 .floater {
     position: fixed;
-    width: 100%;
     top: 8rem;
-    left: 0;
+    left: 27.1rem;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
