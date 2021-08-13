@@ -17,6 +17,18 @@ class Recipe extends Component{
         }
     }
 
+    onSubmit = (e) => {
+        e.preventDefault()
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(this.props.total)
+        };
+        fetch('http://localhost:5000/create-checkout-session', requestOptions)
+            .then(response => response.json())
+            .then(data => this.setState({ postId: data.id }));
+    }
+
     render(){
   
         return(
@@ -31,7 +43,9 @@ class Recipe extends Component{
                         <li className="collection-item"><b>Total: ${this.props.total}.00</b></li>
                     </div>
                     <div className="checkout">
-                        <button className="waves-effect waves-light btn">Checkout</button>
+                    <form onSubmit={this.onSubmit}>
+                    <button type="submit" className="waves-effect waves-light btn">Checkout</button>
+                    </form>
                     </div>
                  </div>
         )
