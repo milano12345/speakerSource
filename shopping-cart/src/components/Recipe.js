@@ -19,14 +19,15 @@ class Recipe extends Component{
 
     onSubmit = (e) => {
         e.preventDefault()
-        const requestOptions = {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(this.props.total)
-        };
-        fetch('https://senditnow.vercel.app/create-checkout-session', requestOptions)
-            .then(response => response.json())
-            .then(data => this.setState({ postId: data.id }));
+        let response = await fetch("https://senditnow.vercel.app/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.props.total),
+    })
+    let result = await response.json();
+    alert(result.status);
     }
 
     render(){
