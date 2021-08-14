@@ -25,9 +25,9 @@ class Recipe extends Component{
         let response = await fetch("http://localhost:5000/create-checkout-session", {
       method: "POST",
       headers: {
-        "Content-Type": "text/html",
+        "Content-Type": "application/json",
       },
-      body: details,
+      body: JSON.stringify(details),
     })
     let result = await response.json();
     alert(result.status);
