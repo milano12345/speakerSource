@@ -22,15 +22,16 @@ class Recipe extends Component{
         let details = {
             price: this.props.total,
           };
-        let response = await fetch("http://localhost:5000/create-checkout-session", {
+     await fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
       headers: {
+        'Accept': 'application/json',
         "Content-Type": "application/json",
       },
       body: JSON.stringify(details),
     })
-    let result = await response.json();
-    alert(result.status);
+    .then(response => response.json())
+    .then(jsondata => console.log(jsondata))
     }
 
     render(){
