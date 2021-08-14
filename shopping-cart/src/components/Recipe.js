@@ -16,23 +16,7 @@ class Recipe extends Component{
             this.props.substractShipping();
         }
     }
-
-    onSubmit = async (e) => {
-        e.preventDefault()
-        let details = {
-            price: this.props.total,
-          };
-     await fetch("http://localhost:3000/create-checkout-session", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json',
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
-    })
-    .then(response => response.json())
-    .then(jsondata => console.log(jsondata))
-    }
+    
 
     render(){
   
@@ -48,7 +32,7 @@ class Recipe extends Component{
                         <li className="collection-item"><b>Total: ${this.props.total}.00</b></li>
                     </div>
                     <div className="checkout">
-                    <form onSubmit={this.onSubmit}>
+                    <form action="https://senditnow.vercel.app/create-checkout-session" method="POST">
                     <button type="submit" className="waves-effect waves-light btn">Checkout</button>
                     </form>
                     </div>
